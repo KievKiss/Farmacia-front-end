@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Navbar() {
@@ -9,11 +10,12 @@ function Navbar() {
     <>
      <div className='w-full bg-[#43aa8b] text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
-            <div className='text-2xl font-bold uppercase'>Farmacia Kiev</div>
+            
+            <Link to='/home' className='text-2xl font-bold uppercase'>Farmacia Kiev</Link>
 
             <div className='flex gap-4'>
-              <div className='hover:underline'>Categoria</div>
-              <div className='hover:underline'>Produto</div>
+                        <Link to='/categorias' className='hover:underline'>Categorias</Link>
+                        <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categoria</Link>
               </div>
           </div>
         </div>
